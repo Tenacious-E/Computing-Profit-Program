@@ -26,7 +26,7 @@ monthly_costs_df = pd.read_excel(path + '/Costs.xlsx')
 
 #getting monthly cost
 monthly_costs_df = monthly_costs_df.iloc[4:6,:].reset_index().drop(columns=['Unnamed: 0','index'])
-monthly_cost = sum(monthly_costs_df.iloc[1,:])/2
+monthly_cost = sum(monthly_costs_df.iloc[1,:])
 
 #check if a error file is already there from a previous run
 if exists(path + '/Error File.xlsx'):
